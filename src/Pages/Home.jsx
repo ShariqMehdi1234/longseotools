@@ -1528,7 +1528,7 @@ function Home() {
                     <h2 className="font-bold tracking-tight text-gray-900 text-center text-5xl font-sans">Images Editing Tools</h2>
                     <p className="text-2xl text-gray-900 text-center pt-3 pb-5 font-sans">Create a favicon, compress an image or resize a picture with a single click. All essentials for image editing are available in one place.</p>
                     <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
-                        {DesignStudioTools.map((product) => (
+                        {ImagesEditingTools.map((product) => (
                             <div className="group relative flex flex-col items-center">
                                 <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-md group-hover:opacity-75 lg:aspect-none flex justify-center shadow-2xl lg:w-2/5 p-3">
                                     <img src={product.imageSrc} alt={product.imageAlt} className="h-full w-full object-cover object-center lg:w-full" />
@@ -1546,19 +1546,6 @@ function Home() {
                     </div>
                 </div>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
             <div className="bg-white">
                 <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
                     <h2 className="font-bold tracking-tight text-gray-900 text-center text-5xl font-sans">Keywords Tools</h2>
