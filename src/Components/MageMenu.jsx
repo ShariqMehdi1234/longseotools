@@ -356,7 +356,7 @@ function MageMenu() {
                         <div className="bg-gray-50 px-5 py-5 sm:px-8 sm:py-8">
                           <div>
                             <h3 className="text-base font-medium text-gray-500">Recent Posts</h3>
-                            <ul role="list" className="mt-4 space-y-4">
+                            <ul className="mt-4 space-y-4">
                               {recentPosts.map((post) => (
                                 <li key={post.id} className="truncate text-base">
                                   <Link href={post.href} className="font-medium text-gray-900 hover:text-gray-700">
