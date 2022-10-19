@@ -1,0 +1,1 @@
+export { default as UIManages } from './UIManages';
