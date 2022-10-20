@@ -1477,394 +1477,396 @@ const OtherTools = [
 function Home() {
     return (
         <React.Fragment>
-            <div className="bg-white">
-                <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-                    <h2 className="font-bold tracking-tight text-gray-900 text-center text-5xl font-sans">Text Analysis Tools</h2>
-                    <p className="text-2xl text-gray-900 text-center pt-3 pb-5 font-sans">Craft awe-inspiring logos, posters, invitations, flyers, and resume with 1000+ premade templates offered with advanced designing tools on our DesignStudio</p>
-                    <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
-                        {TextAnalysisTools.map((product) => (
-                            <div className="group relative flex flex-col items-center">
-                                <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-md group-hover:opacity-75 lg:aspect-none flex justify-center shadow-2xl lg:w-2/5 p-3">
-                                    <img src={product.imageSrc} alt={product.imageAlt} className="h-full w-full object-cover object-center lg:w-full" />
+            <div className="container pt-4">
+                <div className="bg-white">
+                    <div className="mx-auto max-w-2xl py-0 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+                        <h2 className="font-bold tracking-tight text-gray-900 text-center text-5xl font-sans">Text Analysis Tools</h2>
+                        <p className="text-2xl text-gray-900 text-center pt-3 pb-5 font-sans">Craft awe-inspiring logos, posters, invitations, flyers, and resume with 1000+ premade templates offered with advanced designing tools on our DesignStudio</p>
+                        <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
+                            {TextAnalysisTools.map((product) => (
+                                <div key={product.name} className="group relative flex flex-col items-center">
+                                    <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-md group-hover:opacity-75 lg:aspect-none flex justify-center shadow-2xl lg:w-2/5 p-3">
+                                        <img src={product.imageSrc} alt={product.imageAlt} className="h-full w-full object-cover object-center lg:w-full" />
+                                    </div>
+                                    <div className="mt-4 flex justify-center">
+                                        <h3 className="text-sm text-gray-700 text-xl font-sans text-center">
+                                            <Link to={product.href}>
+                                                <span aria-hidden="true" className="absolute inset-0" />
+                                                {product.name}
+                                            </Link>
+                                        </h3>
+                                    </div>
                                 </div>
-                                <div className="mt-4 flex justify-center">
-                                    <h3 className="text-sm text-gray-700 text-xl font-sans text-center">
-                                        <Link to={product.href}>
-                                            <span aria-hidden="true" className="absolute inset-0" />
-                                            {product.name}
-                                        </Link>
-                                    </h3>
-                                </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className="bg-white">
-                <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-                    <h2 className="font-bold tracking-tight text-gray-900 text-center text-5xl font-sans">Design Studio</h2>
-                    <p className="text-2xl text-gray-900 text-center pt-3 pb-5 font-sans">Craft awe-inspiring logos, posters, invitations, flyers, and resume with 1000+ premade templates offered with advanced designing tools on our DesignStudio</p>
-                    <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
-                        {DesignStudioTools.map((product) => (
-                            <div className="group relative flex flex-col items-center">
-                                <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-md group-hover:opacity-75 lg:aspect-none flex justify-center shadow-2xl lg:w-2/5 p-3">
-                                    <img src={product.imageSrc} alt={product.imageAlt} className="h-full w-full object-cover object-center lg:w-full" />
+                <div className="bg-white">
+                    <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+                        <h2 className="font-bold tracking-tight text-gray-900 text-center text-5xl font-sans">Design Studio</h2>
+                        <p className="text-2xl text-gray-900 text-center pt-3 pb-5 font-sans">Craft awe-inspiring logos, posters, invitations, flyers, and resume with 1000+ premade templates offered with advanced designing tools on our DesignStudio</p>
+                        <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
+                            {DesignStudioTools.map((product) => (
+                                <div key={product.name} className="group relative flex flex-col items-center">
+                                    <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-md group-hover:opacity-75 lg:aspect-none flex justify-center shadow-2xl lg:w-2/5 p-3">
+                                        <img src={product.imageSrc} alt={product.imageAlt} className="h-full w-full object-cover object-center lg:w-full" />
+                                    </div>
+                                    <div className="mt-4 flex justify-center">
+                                        <h3 className="text-sm text-gray-700 text-xl font-sans text-center">
+                                            <Link to={product.href}>
+                                                <span aria-hidden="true" className="absolute inset-0" />
+                                                {product.name}
+                                            </Link>
+                                        </h3>
+                                    </div>
                                 </div>
-                                <div className="mt-4 flex justify-center">
-                                    <h3 className="text-sm text-gray-700 text-xl font-sans text-center">
-                                        <Link to={product.href}>
-                                            <span aria-hidden="true" className="absolute inset-0" />
-                                            {product.name}
-                                        </Link>
-                                    </h3>
-                                </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className="bg-white">
-                <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-                    <h2 className="font-bold tracking-tight text-gray-900 text-center text-5xl font-sans">Images Editing Tools</h2>
-                    <p className="text-2xl text-gray-900 text-center pt-3 pb-5 font-sans">Create a favicon, compress an image or resize a picture with a single click. All essentials for image editing are available in one place.</p>
-                    <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
-                        {ImagesEditingTools.map((product) => (
-                            <div className="group relative flex flex-col items-center">
-                                <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-md group-hover:opacity-75 lg:aspect-none flex justify-center shadow-2xl lg:w-2/5 p-3">
-                                    <img src={product.imageSrc} alt={product.imageAlt} className="h-full w-full object-cover object-center lg:w-full" />
+                <div className="bg-white">
+                    <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+                        <h2 className="font-bold tracking-tight text-gray-900 text-center text-5xl font-sans">Images Editing Tools</h2>
+                        <p className="text-2xl text-gray-900 text-center pt-3 pb-5 font-sans">Create a favicon, compress an image or resize a picture with a single click. All essentials for image editing are available in one place.</p>
+                        <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
+                            {ImagesEditingTools.map((product) => (
+                                <div key={product.name} className="group relative flex flex-col items-center">
+                                    <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-md group-hover:opacity-75 lg:aspect-none flex justify-center shadow-2xl lg:w-2/5 p-3">
+                                        <img src={product.imageSrc} alt={product.imageAlt} className="h-full w-full object-cover object-center lg:w-full" />
+                                    </div>
+                                    <div className="mt-4 flex justify-center">
+                                        <h3 className="text-sm text-gray-700 text-xl font-sans text-center">
+                                            <Link to={product.href}>
+                                                <span aria-hidden="true" className="absolute inset-0" />
+                                                {product.name}
+                                            </Link>
+                                        </h3>
+                                    </div>
                                 </div>
-                                <div className="mt-4 flex justify-center">
-                                    <h3 className="text-sm text-gray-700 text-xl font-sans text-center">
-                                        <Link to={product.href}>
-                                            <span aria-hidden="true" className="absolute inset-0" />
-                                            {product.name}
-                                        </Link>
-                                    </h3>
-                                </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className="bg-white">
-                <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-                    <h2 className="font-bold tracking-tight text-gray-900 text-center text-5xl font-sans">Keywords Tools</h2>
-                    <p className="text-2xl text-gray-900 text-center pt-3 pb-5 font-sans">For webmasters and SEO professionals, free, powerful and efficient keyword tools that provide you with thorough keyword research and analysis.</p>
-                    <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
-                        {KeywordsTools.map((product) => (
-                            <div className="group relative flex flex-col items-center">
-                                <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-md group-hover:opacity-75 lg:aspect-none flex justify-center shadow-2xl lg:w-2/5 p-3">
-                                    <img src={product.imageSrc} alt={product.imageAlt} className="h-full w-full object-cover object-center lg:w-full" />
+                <div className="bg-white">
+                    <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+                        <h2 className="font-bold tracking-tight text-gray-900 text-center text-5xl font-sans">Keywords Tools</h2>
+                        <p className="text-2xl text-gray-900 text-center pt-3 pb-5 font-sans">For webmasters and SEO professionals, free, powerful and efficient keyword tools that provide you with thorough keyword research and analysis.</p>
+                        <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
+                            {KeywordsTools.map((product) => (
+                                <div key={product.name} className="group relative flex flex-col items-center">
+                                    <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-md group-hover:opacity-75 lg:aspect-none flex justify-center shadow-2xl lg:w-2/5 p-3">
+                                        <img src={product.imageSrc} alt={product.imageAlt} className="h-full w-full object-cover object-center lg:w-full" />
+                                    </div>
+                                    <div className="mt-4 flex justify-center">
+                                        <h3 className="text-sm text-gray-700 text-xl font-sans text-center">
+                                            <Link to={product.href}>
+                                                <span aria-hidden="true" className="absolute inset-0" />
+                                                {product.name}
+                                            </Link>
+                                        </h3>
+                                    </div>
                                 </div>
-                                <div className="mt-4 flex justify-center">
-                                    <h3 className="text-sm text-gray-700 text-xl font-sans text-center">
-                                        <Link to={product.href}>
-                                            <span aria-hidden="true" className="absolute inset-0" />
-                                            {product.name}
-                                        </Link>
-                                    </h3>
-                                </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className="bg-white">
-                <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-                    <h2 className="font-bold tracking-tight text-gray-900 text-center text-5xl font-sans">BackLink Tools</h2>
-                    <p className="text-2xl text-gray-900 text-center pt-3 pb-5 font-sans">A set of backlink analysis tool to give you a comprehensive inside view of your link profile.</p>
-                    <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
-                        {BackLinkTools.map((product) => (
-                            <div className="group relative flex flex-col items-center">
-                                <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-md group-hover:opacity-75 lg:aspect-none flex justify-center shadow-2xl lg:w-2/5 p-3">
-                                    <img src={product.imageSrc} alt={product.imageAlt} className="h-full w-full object-cover object-center lg:w-full" />
+                <div className="bg-white">
+                    <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+                        <h2 className="font-bold tracking-tight text-gray-900 text-center text-5xl font-sans">BackLink Tools</h2>
+                        <p className="text-2xl text-gray-900 text-center pt-3 pb-5 font-sans">A set of backlink analysis tool to give you a comprehensive inside view of your link profile.</p>
+                        <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
+                            {BackLinkTools.map((product) => (
+                                <div key={product.name} className="group relative flex flex-col items-center">
+                                    <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-md group-hover:opacity-75 lg:aspect-none flex justify-center shadow-2xl lg:w-2/5 p-3">
+                                        <img src={product.imageSrc} alt={product.imageAlt} className="h-full w-full object-cover object-center lg:w-full" />
+                                    </div>
+                                    <div className="mt-4 flex justify-center">
+                                        <h3 className="text-sm text-gray-700 text-xl font-sans text-center">
+                                            <Link to={product.href}>
+                                                <span aria-hidden="true" className="absolute inset-0" />
+                                                {product.name}
+                                            </Link>
+                                        </h3>
+                                    </div>
                                 </div>
-                                <div className="mt-4 flex justify-center">
-                                    <h3 className="text-sm text-gray-700 text-xl font-sans text-center">
-                                        <Link to={product.href}>
-                                            <span aria-hidden="true" className="absolute inset-0" />
-                                            {product.name}
-                                        </Link>
-                                    </h3>
-                                </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className="bg-white">
-                <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-                    <h2 className="font-bold tracking-tight text-gray-900 text-center text-5xl font-sans">Website Management Tools</h2>
-                    <p className="text-2xl text-gray-900 text-center pt-3 pb-5 font-sans">If you are struggling to get more traffic and enhance your website performance, then use these website management tools and in-depth web analysis.</p>
-                    <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
-                        {WebsiteManagementTools.map((product) => (
-                            <div className="group relative flex flex-col items-center">
-                                <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-md group-hover:opacity-75 lg:aspect-none flex justify-center shadow-2xl lg:w-2/5 p-3">
-                                    <img src={product.imageSrc} alt={product.imageAlt} className="h-full w-full object-cover object-center lg:w-full" />
+                <div className="bg-white">
+                    <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+                        <h2 className="font-bold tracking-tight text-gray-900 text-center text-5xl font-sans">Website Management Tools</h2>
+                        <p className="text-2xl text-gray-900 text-center pt-3 pb-5 font-sans">If you are struggling to get more traffic and enhance your website performance, then use these website management tools and in-depth web analysis.</p>
+                        <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
+                            {WebsiteManagementTools.map((product) => (
+                                <div key={product.name} className="group relative flex flex-col items-center">
+                                    <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-md group-hover:opacity-75 lg:aspect-none flex justify-center shadow-2xl lg:w-2/5 p-3">
+                                        <img src={product.imageSrc} alt={product.imageAlt} className="h-full w-full object-cover object-center lg:w-full" />
+                                    </div>
+                                    <div className="mt-4 flex justify-center">
+                                        <h3 className="text-sm text-gray-700 text-xl font-sans text-center">
+                                            <Link to={product.href}>
+                                                <span aria-hidden="true" className="absolute inset-0" />
+                                                {product.name}
+                                            </Link>
+                                        </h3>
+                                    </div>
                                 </div>
-                                <div className="mt-4 flex justify-center">
-                                    <h3 className="text-sm text-gray-700 text-xl font-sans text-center">
-                                        <Link to={product.href}>
-                                            <span aria-hidden="true" className="absolute inset-0" />
-                                            {product.name}
-                                        </Link>
-                                    </h3>
-                                </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className="bg-white">
-                <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-                    <h2 className="font-bold tracking-tight text-gray-900 text-center text-5xl font-sans">Website Tracking Tools</h2>
-                    <p className="text-2xl text-gray-900 text-center pt-3 pb-5 font-sans">A list of free tools in one place to measure, monitor, and keep track of your website’s performance.</p>
-                    <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
-                        {WebsiteTrackingTools.map((product) => (
-                            <div className="group relative flex flex-col items-center">
-                                <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-md group-hover:opacity-75 lg:aspect-none flex justify-center shadow-2xl lg:w-2/5 p-3">
-                                    <img src={product.imageSrc} alt={product.imageAlt} className="h-full w-full object-cover object-center lg:w-full" />
+                <div className="bg-white">
+                    <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+                        <h2 className="font-bold tracking-tight text-gray-900 text-center text-5xl font-sans">Website Tracking Tools</h2>
+                        <p className="text-2xl text-gray-900 text-center pt-3 pb-5 font-sans">A list of free tools in one place to measure, monitor, and keep track of your website’s performance.</p>
+                        <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
+                            {WebsiteTrackingTools.map((product) => (
+                                <div key={product.name} className="group relative flex flex-col items-center">
+                                    <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-md group-hover:opacity-75 lg:aspect-none flex justify-center shadow-2xl lg:w-2/5 p-3">
+                                        <img src={product.imageSrc} alt={product.imageAlt} className="h-full w-full object-cover object-center lg:w-full" />
+                                    </div>
+                                    <div className="mt-4 flex justify-center">
+                                        <h3 className="text-sm text-gray-700 text-xl font-sans text-center">
+                                            <Link to={product.href}>
+                                                <span aria-hidden="true" className="absolute inset-0" />
+                                                {product.name}
+                                            </Link>
+                                        </h3>
+                                    </div>
                                 </div>
-                                <div className="mt-4 flex justify-center">
-                                    <h3 className="text-sm text-gray-700 text-xl font-sans text-center">
-                                        <Link to={product.href}>
-                                            <span aria-hidden="true" className="absolute inset-0" />
-                                            {product.name}
-                                        </Link>
-                                    </h3>
-                                </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className="bg-white">
-                <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-                    <h2 className="font-bold tracking-tight text-gray-900 text-center text-5xl font-sans">Proxy Tools</h2>
-                    <p className="text-2xl text-gray-900 text-center pt-3 pb-5 font-sans">Use proxy tools to know your IP location or to get a free daily proxy list</p>
-                    <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
-                        {ProxyTools.map((product) => (
-                            <div className="group relative flex flex-col items-center">
-                                <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-md group-hover:opacity-75 lg:aspect-none flex justify-center shadow-2xl lg:w-2/5 p-3">
-                                    <img src={product.imageSrc} alt={product.imageAlt} className="h-full w-full object-cover object-center lg:w-full" />
+                <div className="bg-white">
+                    <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+                        <h2 className="font-bold tracking-tight text-gray-900 text-center text-5xl font-sans">Proxy Tools</h2>
+                        <p className="text-2xl text-gray-900 text-center pt-3 pb-5 font-sans">Use proxy tools to know your IP location or to get a free daily proxy list</p>
+                        <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
+                            {ProxyTools.map((product) => (
+                                <div key={product.name} className="group relative flex flex-col items-center">
+                                    <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-md group-hover:opacity-75 lg:aspect-none flex justify-center shadow-2xl lg:w-2/5 p-3">
+                                        <img src={product.imageSrc} alt={product.imageAlt} className="h-full w-full object-cover object-center lg:w-full" />
+                                    </div>
+                                    <div className="mt-4 flex justify-center">
+                                        <h3 className="text-sm text-gray-700 text-xl font-sans text-center">
+                                            <Link to={product.href}>
+                                                <span aria-hidden="true" className="absolute inset-0" />
+                                                {product.name}
+                                            </Link>
+                                        </h3>
+                                    </div>
                                 </div>
-                                <div className="mt-4 flex justify-center">
-                                    <h3 className="text-sm text-gray-700 text-xl font-sans text-center">
-                                        <Link to={product.href}>
-                                            <span aria-hidden="true" className="absolute inset-0" />
-                                            {product.name}
-                                        </Link>
-                                    </h3>
-                                </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className="bg-white">
-                <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-                    <h2 className="font-bold tracking-tight text-gray-900 text-center text-5xl font-sans">Domains Tools</h2>
-                    <p className="text-2xl text-gray-900 text-center pt-3 pb-5 font-sans">A range of domain related tools to find out domain age, domain authority, DNS records or expired domains, etc.</p>
-                    <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
-                        {DomainsTools.map((product) => (
-                            <div className="group relative flex flex-col items-center">
-                                <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-md group-hover:opacity-75 lg:aspect-none flex justify-center shadow-2xl lg:w-2/5 p-3">
-                                    <img src={product.imageSrc} alt={product.imageAlt} className="h-full w-full object-cover object-center lg:w-full" />
+                <div className="bg-white">
+                    <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+                        <h2 className="font-bold tracking-tight text-gray-900 text-center text-5xl font-sans">Domains Tools</h2>
+                        <p className="text-2xl text-gray-900 text-center pt-3 pb-5 font-sans">A range of domain related tools to find out domain age, domain authority, DNS records or expired domains, etc.</p>
+                        <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
+                            {DomainsTools.map((product) => (
+                                <div key={product.name} className="group relative flex flex-col items-center">
+                                    <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-md group-hover:opacity-75 lg:aspect-none flex justify-center shadow-2xl lg:w-2/5 p-3">
+                                        <img src={product.imageSrc} alt={product.imageAlt} className="h-full w-full object-cover object-center lg:w-full" />
+                                    </div>
+                                    <div className="mt-4 flex justify-center">
+                                        <h3 className="text-sm text-gray-700 text-xl font-sans text-center">
+                                            <Link to={product.href}>
+                                                <span aria-hidden="true" className="absolute inset-0" />
+                                                {product.name}
+                                            </Link>
+                                        </h3>
+                                    </div>
                                 </div>
-                                <div className="mt-4 flex justify-center">
-                                    <h3 className="text-sm text-gray-700 text-xl font-sans text-center">
-                                        <Link to={product.href}>
-                                            <span aria-hidden="true" className="absolute inset-0" />
-                                            {product.name}
-                                        </Link>
-                                    </h3>
-                                </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className="bg-white">
-                <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-                    <h2 className="font-bold tracking-tight text-gray-900 text-center text-5xl font-sans">Meta Tags Tools</h2>
-                    <p className="text-2xl text-gray-900 text-center pt-3 pb-5 font-sans">Create new meta tags or analyze the existing ones to get an in-depth analysis of your meta tags and web pages.</p>
-                    <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
-                        {MetaTagsTools.map((product) => (
-                            <div className="group relative flex flex-col items-center">
-                                <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-md group-hover:opacity-75 lg:aspect-none flex justify-center shadow-2xl lg:w-2/5 p-3">
-                                    <img src={product.imageSrc} alt={product.imageAlt} className="h-full w-full object-cover object-center lg:w-full" />
+                <div className="bg-white">
+                    <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+                        <h2 className="font-bold tracking-tight text-gray-900 text-center text-5xl font-sans">Meta Tags Tools</h2>
+                        <p className="text-2xl text-gray-900 text-center pt-3 pb-5 font-sans">Create new meta tags or analyze the existing ones to get an in-depth analysis of your meta tags and web pages.</p>
+                        <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
+                            {MetaTagsTools.map((product) => (
+                                <div key={product.name} className="group relative flex flex-col items-center">
+                                    <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-md group-hover:opacity-75 lg:aspect-none flex justify-center shadow-2xl lg:w-2/5 p-3">
+                                        <img src={product.imageSrc} alt={product.imageAlt} className="h-full w-full object-cover object-center lg:w-full" />
+                                    </div>
+                                    <div className="mt-4 flex justify-center">
+                                        <h3 className="text-sm text-gray-700 text-xl font-sans text-center">
+                                            <Link to={product.href}>
+                                                <span aria-hidden="true" className="absolute inset-0" />
+                                                {product.name}
+                                            </Link>
+                                        </h3>
+                                    </div>
                                 </div>
-                                <div className="mt-4 flex justify-center">
-                                    <h3 className="text-sm text-gray-700 text-xl font-sans text-center">
-                                        <Link to={product.href}>
-                                            <span aria-hidden="true" className="absolute inset-0" />
-                                            {product.name}
-                                        </Link>
-                                    </h3>
-                                </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className="bg-white">
-                <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-                    <h2 className="font-bold tracking-tight text-gray-900 text-center text-5xl font-sans">Password Management Tools</h2>
-                    <p className="text-2xl text-gray-900 text-center pt-3 pb-5 font-sans">Create a secure password, check password strength or encrypt a password; all tools related to password management are readily available.</p>
-                    <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
-                        {PasswordManagementTools.map((product) => (
-                            <div className="group relative flex flex-col items-center">
-                                <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-md group-hover:opacity-75 lg:aspect-none flex justify-center shadow-2xl lg:w-2/5 p-3">
-                                    <img src={product.imageSrc} alt={product.imageAlt} className="h-full w-full object-cover object-center lg:w-full" />
+                <div className="bg-white">
+                    <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+                        <h2 className="font-bold tracking-tight text-gray-900 text-center text-5xl font-sans">Password Management Tools</h2>
+                        <p className="text-2xl text-gray-900 text-center pt-3 pb-5 font-sans">Create a secure password, check password strength or encrypt a password; all tools related to password management are readily available.</p>
+                        <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
+                            {PasswordManagementTools.map((product) => (
+                                <div key={product.name} className="group relative flex flex-col items-center">
+                                    <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-md group-hover:opacity-75 lg:aspect-none flex justify-center shadow-2xl lg:w-2/5 p-3">
+                                        <img src={product.imageSrc} alt={product.imageAlt} className="h-full w-full object-cover object-center lg:w-full" />
+                                    </div>
+                                    <div className="mt-4 flex justify-center">
+                                        <h3 className="text-sm text-gray-700 text-xl font-sans text-center">
+                                            <Link to={product.href}>
+                                                <span aria-hidden="true" className="absolute inset-0" />
+                                                {product.name}
+                                            </Link>
+                                        </h3>
+                                    </div>
                                 </div>
-                                <div className="mt-4 flex justify-center">
-                                    <h3 className="text-sm text-gray-700 text-xl font-sans text-center">
-                                        <Link to={product.href}>
-                                            <span aria-hidden="true" className="absolute inset-0" />
-                                            {product.name}
-                                        </Link>
-                                    </h3>
-                                </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className="bg-white">
-                <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-                    <h2 className="font-bold tracking-tight text-gray-900 text-center text-5xl font-sans">Online PDF Tools</h2>
-                    <p className="text-2xl text-gray-900 text-center pt-3 pb-5 font-sans">All the tools you need to work with PDF files, at your fingertips. Merge, rotate, unlock, lock, watermark and convert PDFs with just a few clicks.</p>
-                    <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
-                        {OnlinePDFTools.map((product) => (
-                            <div className="group relative flex flex-col items-center">
-                                <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-md group-hover:opacity-75 lg:aspect-none flex justify-center shadow-2xl lg:w-2/5 p-3">
-                                    <img src={product.imageSrc} alt={product.imageAlt} className="h-full w-full object-cover object-center lg:w-full" />
+                <div className="bg-white">
+                    <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+                        <h2 className="font-bold tracking-tight text-gray-900 text-center text-5xl font-sans">Online PDF Tools</h2>
+                        <p className="text-2xl text-gray-900 text-center pt-3 pb-5 font-sans">All the tools you need to work with PDF files, at your fingertips. Merge, rotate, unlock, lock, watermark and convert PDFs with just a few clicks.</p>
+                        <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
+                            {OnlinePDFTools.map((product) => (
+                                <div key={product.name} className="group relative flex flex-col items-center">
+                                    <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-md group-hover:opacity-75 lg:aspect-none flex justify-center shadow-2xl lg:w-2/5 p-3">
+                                        <img src={product.imageSrc} alt={product.imageAlt} className="h-full w-full object-cover object-center lg:w-full" />
+                                    </div>
+                                    <div className="mt-4 flex justify-center">
+                                        <h3 className="text-sm text-gray-700 text-xl font-sans text-center">
+                                            <Link to={product.href}>
+                                                <span aria-hidden="true" className="absolute inset-0" />
+                                                {product.name}
+                                            </Link>
+                                        </h3>
+                                    </div>
                                 </div>
-                                <div className="mt-4 flex justify-center">
-                                    <h3 className="text-sm text-gray-700 text-xl font-sans text-center">
-                                        <Link to={product.href}>
-                                            <span aria-hidden="true" className="absolute inset-0" />
-                                            {product.name}
-                                        </Link>
-                                    </h3>
-                                </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className="bg-white">
-                <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-                    <h2 className="font-bold tracking-tight text-gray-900 text-center text-5xl font-sans">Development Tools</h2>
-                    <p className="text-2xl text-gray-900 text-center pt-3 pb-5 font-sans">Developer tools (or "development tools" or short "DevTools") are programs that allow a developer to create, test and debug software. Current browsers provide integrated developer tools, which allow to inspect a website.</p>
-                    <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
-                        {DevelopmentTools.map((product) => (
-                            <div className="group relative flex flex-col items-center">
-                                <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-md group-hover:opacity-75 lg:aspect-none flex justify-center shadow-2xl lg:w-2/5 p-3">
-                                    <img src={product.imageSrc} alt={product.imageAlt} className="h-full w-full object-cover object-center lg:w-full" />
+                <div className="bg-white">
+                    <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+                        <h2 className="font-bold tracking-tight text-gray-900 text-center text-5xl font-sans">Development Tools</h2>
+                        <p className="text-2xl text-gray-900 text-center pt-3 pb-5 font-sans">Developer tools (or "development tools" or short "DevTools") are programs that allow a developer to create, test and debug software. Current browsers provide integrated developer tools, which allow to inspect a website.</p>
+                        <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
+                            {DevelopmentTools.map((product) => (
+                                <div key={product.name} className="group relative flex flex-col items-center">
+                                    <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-md group-hover:opacity-75 lg:aspect-none flex justify-center shadow-2xl lg:w-2/5 p-3">
+                                        <img src={product.imageSrc} alt={product.imageAlt} className="h-full w-full object-cover object-center lg:w-full" />
+                                    </div>
+                                    <div className="mt-4 flex justify-center">
+                                        <h3 className="text-sm text-gray-700 text-xl font-sans text-center">
+                                            <Link to={product.href}>
+                                                <span aria-hidden="true" className="absolute inset-0" />
+                                                {product.name}
+                                            </Link>
+                                        </h3>
+                                    </div>
                                 </div>
-                                <div className="mt-4 flex justify-center">
-                                    <h3 className="text-sm text-gray-700 text-xl font-sans text-center">
-                                        <Link to={product.href}>
-                                            <span aria-hidden="true" className="absolute inset-0" />
-                                            {product.name}
-                                        </Link>
-                                    </h3>
-                                </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className="bg-white">
-                <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-                    <h2 className="font-bold tracking-tight text-gray-900 text-center text-5xl font-sans">Unit Converter Tools</h2>
-                    <p className="text-2xl text-gray-900 text-center pt-3 pb-5 font-sans">Unit Converter is a measurement conversion tool that enables you to convert from over 1,000 different measurement units of Area, Basal Area (Forestry), Circular, Circular Area, dbh (Forestry), Energy/Work, Flow, Force, Length, Power, Pressure/Stress, Temperature, Time, Velocity, Volume, and Weight/Mass, for a total of over 100,000 possible conversions.  Unit Converter also enables you to add your own units and measurement classes to customize this software to your own needs.</p>
-                    <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
-                        {UnitConverterTools.map((product) => (
-                            <div className="group relative flex flex-col items-center">
-                                <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-md group-hover:opacity-75 lg:aspect-none flex justify-center shadow-2xl lg:w-2/5 p-3">
-                                    <img src={product.imageSrc} alt={product.imageAlt} className="h-full w-full object-cover object-center lg:w-full" />
+                <div className="bg-white">
+                    <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+                        <h2 className="font-bold tracking-tight text-gray-900 text-center text-5xl font-sans">Unit Converter Tools</h2>
+                        <p className="text-2xl text-gray-900 text-center pt-3 pb-5 font-sans">Unit Converter is a measurement conversion tool that enables you to convert from over 1,000 different measurement units of Area, Basal Area (Forestry), Circular, Circular Area, dbh (Forestry), Energy/Work, Flow, Force, Length, Power, Pressure/Stress, Temperature, Time, Velocity, Volume, and Weight/Mass, for a total of over 100,000 possible conversions.  Unit Converter also enables you to add your own units and measurement classes to customize this software to your own needs.</p>
+                        <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
+                            {UnitConverterTools.map((product) => (
+                                <div key={product.name} className="group relative flex flex-col items-center">
+                                    <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-md group-hover:opacity-75 lg:aspect-none flex justify-center shadow-2xl lg:w-2/5 p-3">
+                                        <img src={product.imageSrc} alt={product.imageAlt} className="h-full w-full object-cover object-center lg:w-full" />
+                                    </div>
+                                    <div className="mt-4 flex justify-center">
+                                        <h3 className="text-sm text-gray-700 text-xl font-sans text-center">
+                                            <Link to={product.href}>
+                                                <span aria-hidden="true" className="absolute inset-0" />
+                                                {product.name}
+                                            </Link>
+                                        </h3>
+                                    </div>
                                 </div>
-                                <div className="mt-4 flex justify-center">
-                                    <h3 className="text-sm text-gray-700 text-xl font-sans text-center">
-                                        <Link to={product.href}>
-                                            <span aria-hidden="true" className="absolute inset-0" />
-                                            {product.name}
-                                        </Link>
-                                    </h3>
-                                </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className="bg-white">
-                <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-                    <h2 className="font-bold tracking-tight text-gray-900 text-center text-5xl font-sans">Binary Converter Tools</h2>
-                    <p className="text-2xl text-gray-900 text-center pt-3 pb-5 font-sans">Binary Converter is a tool used for various applications in digital electronics to perform binary to decimal conversion and decimal to binary conversion. In digital computation, the binary numbers are the numeric codes to represent the decimal numbers.</p>
-                    <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
-                        {BinaryConverterTools.map((product) => (
-                            <div className="group relative flex flex-col items-center">
-                                <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-md group-hover:opacity-75 lg:aspect-none flex justify-center shadow-2xl lg:w-2/5 p-3">
-                                    <img src={product.imageSrc} alt={product.imageAlt} className="h-full w-full object-cover object-center lg:w-full" />
+                <div className="bg-white">
+                    <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+                        <h2 className="font-bold tracking-tight text-gray-900 text-center text-5xl font-sans">Binary Converter Tools</h2>
+                        <p className="text-2xl text-gray-900 text-center pt-3 pb-5 font-sans">Binary Converter is a tool used for various applications in digital electronics to perform binary to decimal conversion and decimal to binary conversion. In digital computation, the binary numbers are the numeric codes to represent the decimal numbers.</p>
+                        <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
+                            {BinaryConverterTools.map((product) => (
+                                <div key={product.name} className="group relative flex flex-col items-center">
+                                    <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-md group-hover:opacity-75 lg:aspect-none flex justify-center shadow-2xl lg:w-2/5 p-3">
+                                        <img src={product.imageSrc} alt={product.imageAlt} className="h-full w-full object-cover object-center lg:w-full" />
+                                    </div>
+                                    <div className="mt-4 flex justify-center">
+                                        <h3 className="text-sm text-gray-700 text-xl font-sans text-center">
+                                            <Link to={product.href}>
+                                                <span aria-hidden="true" className="absolute inset-0" />
+                                                {product.name}
+                                            </Link>
+                                        </h3>
+                                    </div>
                                 </div>
-                                <div className="mt-4 flex justify-center">
-                                    <h3 className="text-sm text-gray-700 text-xl font-sans text-center">
-                                        <Link to={product.href}>
-                                            <span aria-hidden="true" className="absolute inset-0" />
-                                            {product.name}
-                                        </Link>
-                                    </h3>
-                                </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className="bg-white">
-                <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-                    <h2 className="font-bold tracking-tight text-gray-900 text-center text-5xl font-sans">Online Calculators Tools</h2>
-                    <p className="text-2xl text-gray-900 text-center pt-3 pb-5 font-sans">In turn, an online calculator has a different purpose: it is an interactive software tool that is designed to process a predefined set of mathematical functions in order to simulate a business process. Rather than the end user defining the operation, the tool’s designer is responsible for generating the calculation model.</p>
-                    <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
-                        {OnlineCalculatorsTools.map((product) => (
-                            <div className="group relative flex flex-col items-center">
-                                <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-md group-hover:opacity-75 lg:aspect-none flex justify-center shadow-2xl lg:w-2/5 p-3">
-                                    <img src={product.imageSrc} alt={product.imageAlt} className="h-full w-full object-cover object-center lg:w-full" />
+                <div className="bg-white">
+                    <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+                        <h2 className="font-bold tracking-tight text-gray-900 text-center text-5xl font-sans">Online Calculators Tools</h2>
+                        <p className="text-2xl text-gray-900 text-center pt-3 pb-5 font-sans">In turn, an online calculator has a different purpose: it is an interactive software tool that is designed to process a predefined set of mathematical functions in order to simulate a business process. Rather than the end user defining the operation, the tool’s designer is responsible for generating the calculation model.</p>
+                        <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
+                            {OnlineCalculatorsTools.map((product) => (
+                                <div key={product.name} className="group relative flex flex-col items-center">
+                                    <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-md group-hover:opacity-75 lg:aspect-none flex justify-center shadow-2xl lg:w-2/5 p-3">
+                                        <img src={product.imageSrc} alt={product.imageAlt} className="h-full w-full object-cover object-center lg:w-full" />
+                                    </div>
+                                    <div className="mt-4 flex justify-center">
+                                        <h3 className="text-sm text-gray-700 text-xl font-sans text-center">
+                                            <Link to={product.href}>
+                                                <span aria-hidden="true" className="absolute inset-0" />
+                                                {product.name}
+                                            </Link>
+                                        </h3>
+                                    </div>
                                 </div>
-                                <div className="mt-4 flex justify-center">
-                                    <h3 className="text-sm text-gray-700 text-xl font-sans text-center">
-                                        <Link to={product.href}>
-                                            <span aria-hidden="true" className="absolute inset-0" />
-                                            {product.name}
-                                        </Link>
-                                    </h3>
-                                </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className="bg-white">
-                <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-                    <h2 className="font-bold tracking-tight text-gray-900 text-center text-5xl font-sans">Other Tools</h2>
-                    <p className="text-2xl text-gray-900 text-center pt-3 pb-5 font-sans">SEO tools provide data and alerts about the overall health and success of your website.</p>
-                    <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
-                        {OtherTools.map((product) => (
-                            <div className="group relative flex flex-col items-center">
-                                <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-md group-hover:opacity-75 lg:aspect-none flex justify-center shadow-2xl lg:w-2/5 p-3">
-                                    <img src={product.imageSrc} alt={product.imageAlt} className="h-full w-full object-cover object-center lg:w-full" />
+                <div className="bg-white">
+                    <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+                        <h2 className="font-bold tracking-tight text-gray-900 text-center text-5xl font-sans">Other Tools</h2>
+                        <p className="text-2xl text-gray-900 text-center pt-3 pb-5 font-sans">SEO tools provide data and alerts about the overall health and success of your website.</p>
+                        <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
+                            {OtherTools.map((product) => (
+                                <div key={product.name} className="group relative flex flex-col items-center">
+                                    <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-md group-hover:opacity-75 lg:aspect-none flex justify-center shadow-2xl lg:w-2/5 p-3">
+                                        <img src={product.imageSrc} alt={product.imageAlt} className="h-full w-full object-cover object-center lg:w-full" />
+                                    </div>
+                                    <div className="mt-4 flex justify-center">
+                                        <h3 className="text-sm text-gray-700 text-xl font-sans text-center">
+                                            <Link to={product.href}>
+                                                <span aria-hidden="true" className="absolute inset-0" />
+                                                {product.name}
+                                            </Link>
+                                        </h3>
+                                    </div>
                                 </div>
-                                <div className="mt-4 flex justify-center">
-                                    <h3 className="text-sm text-gray-700 text-xl font-sans text-center">
-                                        <Link to={product.href}>
-                                            <span aria-hidden="true" className="absolute inset-0" />
-                                            {product.name}
-                                        </Link>
-                                    </h3>
-                                </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
